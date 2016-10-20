@@ -1,0 +1,17 @@
+@import 'https://fonts.googleapis.com/css?family=Lobster|Roboto&subset=cyrillic';
+
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+.lobster{
+	font-family: 'Lobster', cursive;
+}
+.large{
+	font-size:300%
+}
+@each $align in left, right, center, justify {
+  .text-#{$align}{
+    text-align: $align;
+  }
+}

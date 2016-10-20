@@ -1,0 +1,120 @@
+$nav-color: #17202a;
+$nav-background-color:#d7dbdd;
+
+$nav-brand-color:inherit;
+$nav-brand-color-hover:#17202a;
+$nav-brand-background-color:inherit;
+$nav-brand-background-color-hover: white;
+
+$nav-link-color:inherit;
+$nav-link-color-hover:#17202a;
+$nav-link-background-color:inherit;
+$nav-link-background-color-hover: white;
+
+body{
+	padding-top: 50px;
+}
+
+nav.navbar{
+	display: block;
+	width: 100%;
+	height: 50px;
+	padding: 0;
+	float: left;
+	color: $nav-color;
+	background-color: $nav-background-color;
+	position:fixed;
+	top: 0;
+&:after{
+    @extend %parrent-div-height-fix;
+  }
+	button.hamburger{
+		display: none;
+		outline: none;
+		border:0;
+	}
+	@media (max-width: 768px){
+		button.hamburger{
+			display: inline-block;
+			margin-left: 10px;
+			margin-top: -2px;
+			padding: 10px 0;
+			background-color: transparent;
+			color: $nav-brand-color;
+			height: 50px;
+		}
+		.toogle-content{
+			position:fixed;
+			display: none;
+			background-color: white;
+			color: #454545;
+			height: calc(100% - 50px);
+			width: 60%;
+			top: 50px;
+			a:hover,
+			a:focus{
+				background-color: transparent;
+				color: black;
+
+			}
+		}
+	}
+	@media (min-width: 768px){
+		.toogle-content{
+			display: inline-block !important;
+		}
+	}
+
+	.nav-name{
+		display: inline-block;
+		font-size: 35px;
+		line-height: 30px;
+		@extend .lobster;
+
+		a{
+			padding: 10px;
+			color: $nav-brand-color;
+			background-color: $nav-brand-background-color;
+			display: block;
+			text-decoration: none;
+
+			&:hover,
+			&:focus{
+				color: $nav-brand-color-hover;
+				background-color: $nav-brand-background-color-hover;
+			}
+		}
+	}
+	ul{
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		li{
+			display: inline-block;
+			list-style-type: none;
+			font-size: 16px;
+			line-height: 16px;
+			margin: 0 -2px;
+
+			a{
+				padding: 17px 15px;
+				color: $nav-link-color;
+				background-color: $nav-link-background-color;
+				display: block;
+				text-decoration: none;
+
+				&:hover,
+				&:focus{
+					color: $nav-link-color-hover;
+					background-color: $nav-link-background-color-hover;
+				}
+			}
+		}
+		@media (max-width: 768px){
+			li{
+				display: block;
+			}
+		}
+	}
+}

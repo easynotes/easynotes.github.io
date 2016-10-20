@@ -1,0 +1,24 @@
+{
+  "author": "Dima Kovalevskyi",
+  "name": "easy-notes",
+  "version": "0.1.1",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "description": "Simple notes application usign Google API",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/easynotes/easynotes.github.io.git"
+  },
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/easynotes/easynotes.github.io/issues"
+  },
+  "homepage": "https://github.com/easynotes/easynotes.github.io#readme"
+}
